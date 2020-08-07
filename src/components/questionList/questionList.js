@@ -2,17 +2,26 @@ import React from "react";
 
 import './questionList.css';
 
-const QuestionList = () => {
+const QuestionList = (props) => {
+    const labels = [
+        {name: 'Разминка', index: 0},
+        {name: 'Воробьиные', index: 1},
+        {name: 'Лесные птицы', index: 2},
+        {name: 'Певчие птицы', index: 3},
+        {name: 'Хищные птицы', index: 4},
+        {name: 'Морские птицы', index: 5}
+    ];
+    const {page} = props;
+    const liElemets = labels.map(({name, index}) => {
+        const active = index === page ? "page-item active" : "page-item disabled";
+        return <li className={active}><a className="page-link" href="/#">{name}</a></li>
+    });
+
     return (
-        <div className="questionList btn-group"
-             role="group"
-             aria-label="Basic example">
-            <button type="button" className="btn btn-primary">Разминка</button>
-            <button type="button" className="btn btn-primary">Вопрос 1</button>
-            <button type="button" className="btn btn-primary">Вопрос 2</button>
-            <button type="button" className="btn btn-primary">Вопрос 3</button>
-            <button type="button" className="btn btn-primary">Вопрос 4</button>
-            <button type="button" className="btn btn-primary">Вопрос 5</button>
+        <div className="question-list">
+            <ul className="pagination">
+                {liElemets}
+            </ul>
         </div>
     );
 };
