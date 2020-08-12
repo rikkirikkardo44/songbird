@@ -12,15 +12,15 @@ const QuestionList = (props) => {
         {name: 'Морские птицы', index: 5}
     ];
     const {page} = props;
-    const liElemets = labels.map(({name, index}) => {
+    const liElements = labels.map(({name, index}) => {
         const active = index === page ? "page-item active" : "page-item disabled";
-        return <li className={active}><a className="page-link" href="/#">{name}</a></li>
+        return <li className={active} key={index}><a className="page-link" href="/#">{name}</a></li>
     });
 
     return (
         <div className="question-list">
             <ul className="pagination">
-                {liElemets}
+                {liElements}
             </ul>
         </div>
     );

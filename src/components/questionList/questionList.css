@@ -1,4 +1,23 @@
-.questionList {
-    width: auto;
-    margin-right: 3px;
+.question-list ul.pagination {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.question-list ul li {
+    flex: auto;
+    text-align: center;
+}
+
+.page-item.disabled .page-link {
+    background-color: #bc9419;
+    border-color: #bc9419;
+}
+
+.page-item.active .page-link {
+    background-color: #826200;
+    border-color: #826200;
 }
