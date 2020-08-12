@@ -1,20 +1,17 @@
 import React from "react";
 
 import QuestionList from "../questionList/questionList";
-import logo from '../../files/LogoMakr_3t4mUs.png';
 
 import './header.css';
 
-const Header = () => {
+const Header = ({score, page}) => {
     return (
-        <div className="header d-flex flex-column">
-            <div className="top-panel d-flex">
-                <img src={logo} className="img-fluid" alt="Responsive image"/>
-                <h2>Score:</h2><span className="score">4</span>
+        <div className="header">
+            <div className="top-panel">
+                <div className="logo"/>
+                <h4>Score: <span className="score">{score}</span></h4>
             </div>
-            <div className="p-2">
-                <QuestionList/>
-            </div>
+            <QuestionList page={page}/>
         </div>
     );
 };
