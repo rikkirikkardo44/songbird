@@ -1,0 +1,40 @@
+.rhap_container {
+    background-color: #073642;
+    box-shadow: none;
+}
+
+.rhap_controls-section {
+    margin-right: 20px !important;
+}
+
+.rhap_controls-section {
+    flex-grow: 0.3 !important;
+}
+
+.rhap_progress-container {
+    margin: 0 15px !important;
+}
+
+.rhap_main-controls-button {
+    color: #826200;
+}
+
+.audio-player {
+    width: 100%;
+}
+
+.rhap_volume-button {
+    color: #826200;
+}
+
+.rhap_volume-indicator {
+    background: #826200;
+}
+
+.rhap_progress-indicator {
+    background: #826200;
+}
+
+.rhap_time {
+    color: #826200;
+}
