@@ -1,0 +1,50 @@
+.bird {
+    color: lightgrey;
+    background-color: #073642;
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid #555;
+    height: 100%;
+}
+
+.bird-info {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.bird-info .audio {
+    padding: 10px;
+}
+
+.bird .bird-image {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    margin: 0px;
+    object-fit: cover;
+}
+
+.bird-info .list-group {
+    padding: 0.5rem 1rem;
+}
+
+.bird-info .list-group-item {
+    padding: 5px;
+}
+
+#audio-info {
+    width: 100%;
+}
+
+audio {
+    color: #002b36;
+}
+
+.bird .list-group {
+    width: 100%;
+}
+
+.info {
+    margin-bottom: 25px;
+}
