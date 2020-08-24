@@ -9,7 +9,7 @@ const Header = ({score, page}) => {
         <div className="header">
             <div className="top-panel">
                 <div className="logo"/>
-                <h4>Score: <span className="score">{score}</span></h4>
+                <div className="score"><h4>Очки: <span>{score}</span></h4></div>
             </div>
             <QuestionList page={page}/>
         </div>

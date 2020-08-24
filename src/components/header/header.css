@@ -8,10 +8,10 @@
     margin-bottom: 5px;
     justify-content: space-between;
     display: flex;
-    flex-direction: row;
+    align-items: end;
 }
 
-.header .logo {
+.logo {
     background-image: url("../../files/LogoMakr_3OGhKn.png");
     width: 350px;
     height: 100px;
@@ -19,14 +19,11 @@
     background-repeat: no-repeat;
 }
 
-.header h4 {
-    font-size: 1.2rem;
-    color: grey;
+.top-panel h4 {
+    font-size: 15px;
+    color: lightgrey;
 }
 
 .score {
-    line-height: 85px;
-    color: aliceblue;
+    margin: 60px 3px 0 0;
 }
-
-
