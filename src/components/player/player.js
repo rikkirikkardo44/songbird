@@ -1,18 +1,22 @@
-import React from "react";
+import React, {useRef} from "react";
 import AudioPlayer from "react-h5-audio-player";
 
 import 'react-h5-audio-player/lib/styles.css';
 import "./player.css";
 
-export default ({src}) => {
+export default ({src, levelEnd}) => {
+    const ref = useRef();
+
+    if (levelEnd) {
+        ref.current.audio.current.pause();
+    }
     return (
-        <div className="audio-player">
             <AudioPlayer
                 src={src}
-                layout="horizontal-reverse"
+                ref={ref}
+                layout="horizontal"
                 showJumpControls={false}
                 autoPlayAfterSrcChange={false}
                 customControlsSection={['MAIN_CONTROLS', 'VOLUME_CONTROLS']}/>
-        </div>
     );
 };

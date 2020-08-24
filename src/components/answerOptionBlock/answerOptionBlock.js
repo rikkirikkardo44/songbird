@@ -12,20 +12,22 @@ export default class AnswerOptionBlock extends React.Component {
     };
 
     nextLevel() {
-        const ulEl = document.getElementById("answer-options");
-        const liEls = ulEl.querySelectorAll('li');
-        const nextLevelButton = document.getElementById("next-level");
-        liEls.forEach((li) => {
-            if (li.classList.contains('default')) {
-                return;
-            }
-            li.classList.remove('error');
-            li.classList.remove('success');
-            li.classList.add('default');
-        });
-        nextLevelButton.classList.add('disabled');
-        this.setState({points: 6, levelEnd: false, index: false});
-        this.props.levelEnd();
+        if (this.state.levelEnd) {
+            const ulEl = document.getElementById("answer-options");
+            const liEls = ulEl.querySelectorAll('li');
+            const nextLevelButton = document.getElementById("next-level");
+            liEls.forEach((li) => {
+                if (li.classList.contains('default')) {
+                    return;
+                }
+                li.classList.remove('error');
+                li.classList.remove('success');
+                li.classList.add('default');
+            });
+            nextLevelButton.classList.add('disabled');
+            this.setState({points: 5, levelEnd: false, index: false});
+            this.props.levelEnd();
+        };
     };
 
     render() {
@@ -77,7 +79,7 @@ export default class AnswerOptionBlock extends React.Component {
                 </div>
                 <BirdInfo index={this.state.index}
                           data={data}/>
-                <button id="next-level" className="btn disabled" onClick={() => this.nextLevel()}>Следующий уровень</button>
+                <button id="next-level" className="btn disabled" onClick={() => this.nextLevel()}>Следующий вопрос</button>
             </div>
         );
     };
