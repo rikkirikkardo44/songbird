@@ -36,3 +36,9 @@
 #btn .btn-lg {
     width: 100%;
 }
+
+@media (max-width: 450px) {
+    .game-result h1 {
+        font-size: 35px;
+    }
+}

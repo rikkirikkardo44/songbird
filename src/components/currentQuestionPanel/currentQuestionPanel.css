@@ -36,3 +36,22 @@
 .list-group-item h3 {
     color: aliceblue;
 }
+
+@media (max-width: 450px) {
+    .bird-image img {
+        width: 150px;
+        height: 112px;
+    }
+    .current-question-panel {
+        flex-wrap: wrap;
+    }
+    .question_body {
+        padding: 0;
+    }
+    .question_body .title {
+        margin: 15px 0 0 10px;
+    }
+    .question_body .audio {
+        margin: 0;
+    }
+}

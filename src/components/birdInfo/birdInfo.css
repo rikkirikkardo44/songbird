@@ -44,3 +44,16 @@
 .bird_info {
     margin-bottom: 25px;
 }
+
+@media (max-width: 450px) {
+    .bird_info-content {
+        flex-wrap: wrap;
+    }
+    .bird_info-body .bird-image {
+        width: 150px;
+        height: 112px;
+    }
+    .bird_info-content .list-group {
+        padding: 0.5rem 0;
+    }
+}
