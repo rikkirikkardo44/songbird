@@ -1,7 +1,11 @@
 body {
-    background: #303030;
+    background: #002b36;
     margin: 0px;
     height: 100%;
+    font-family: "Comic Sans MS";
 }
-/*
-#E9B0D6*/
+
+.col-md-6 {
+    display: flex;
+}
+

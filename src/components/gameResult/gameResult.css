@@ -1,0 +1,44 @@
+.game-result {
+    background-color: #073642;
+    display: flex;
+    color: aliceblue;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.game-result div {
+    margin: auto;
+}
+
+.game-result h1 {
+    font-size: 50px;
+}
+
+.game-result .btn-lg {
+    background-color: #826200;
+    margin-top: 5rem;
+    width: 100%;
+    color: lightgrey;
+}
+
+.game-result .btn-lg:hover {
+    background-color: #bc9419;
+}
+
+#result {
+    width: 100%;
+}
+
+#btn {
+    width: 100%;
+}
+
+#btn .btn-lg {
+    width: 100%;
+}
+
+@media (max-width: 450px) {
+    .game-result h1 {
+        font-size: 35px;
+    }
+}
